@@ -32,25 +32,27 @@ restart - restart bot
 
 1. **Installing requirements**
  
- - Clone repo:
+ - Update & Installing requirements:
  
        sudo apt-get update 
-       sudo apt-get install -y python3.8 
-       sudo apt-get install -y python3-venv 
-
-       apt-get install git wget curl python3 python3-pip locales ffmpeg p7zip-full
+       sudo apt-get upgrade
+       apt-get install git wget curl python3 python3-pip python3-venv locales ffmpeg p7zip-full 
  
-        
+ - Installing rclone:
+ 
+       curl https://rclone.org/install.sh | bash
 
  - Clone repo:
 
         git clone https://github.com/Sam-Max/Rclone-Tg-Bot rclonetgbot/ && cd rclonetgbot
  
-        pip install -r requirements.txt 
+ - Pip install requirements:
+ 
+        pip3 install -r requirements.txt 
 
 2. **Set up config file**
 
-- cp sample_config.env config.env 
+        cp sample_config.env config.env 
 
 - Fill up variables:
 
@@ -69,49 +71,11 @@ restart - restart bot
         - `TG_SPLIT_SIZE`: Telegram upload limit in bytes (max `2097151000` which is ~2GB), to automatically slice the file bigger that this size into small parts to upload to Telegram.
         - `EDIT_SLEEP_SECS`: Seconds for update the progress message regulary. Default to 10. 
 
-3. **Deploying on VPS Using Docker**
+3. **Deploying on VPS**
 
-- Start Docker daemon (skip if already running), if installed by snap then use 2nd command:
-    
-        sudo dockerd
-        sudo snap start docker
-
-     Note: If not started or not starting, run the command below then try to start.
-
-        sudo apt install docker.io
-
-- Build Docker image:
-
-        sudo docker build . -t rclonetg-bot 
-
-- Run the image:
-
-        sudo docker run rclonetg-bot 
-
-- To stop the image:
-
-        sudo docker ps
-        sudo docker stop id
-
-- To clear the container:
-
-        sudo docker container prune
-
-- To delete the images:
-
-        sudo docker image prune -a
-
-4. **Deploying on VPS without Docker**
-- sudo apt update 
-- sudo apt install -y python3.8 
-- sudo apt install -y python3-venv 
-- python3 -m venv venv 
-- source venv/bin/activate 
-- pip install -r requirements.txt 
-- sudo apt -qq install -y git wget curl python3 python3-pip locales ffmpeg p7zip-full
-- curl https://rclone.org/install.sh | bash
-- chmod 777 start.sh 
-- ./start.sh
+       curl https://rclone.org/install.sh | bash
+       chmod 777 start.sh 
+       ./start.sh
 
 
 ## Repositories used to develop this bot:
