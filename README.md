@@ -53,6 +53,7 @@ restart - restart bot
 2. **Set up config file**
 
         cp sample_config.env config.env 
+        cp /root/.config/rclone/rclone.conf rclone.conf
 
 - Fill up variables:
 
