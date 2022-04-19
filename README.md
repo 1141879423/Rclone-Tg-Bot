@@ -36,14 +36,9 @@ restart - restart bot
 
         git clone https://github.com/Sam-Max/Rclone-Tg-Bot rclonetgbot/ && cd rclonetgbot
 
- - Install Docker(skip this if deploying without docker).
-
-        sudo apt install snapd
-        sudo snap install docker
-
 2. **Set up config file**
 
-- cp config_sample.env config.env 
+- cp sample_config.env config.env 
 
 - Fill up variables:
 
