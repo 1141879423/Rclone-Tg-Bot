@@ -31,10 +31,22 @@ restart - restart bot
 ## Deploy on VPS: 
 
 1. **Installing requirements**
+ 
+ - Clone repo:
+ 
+       sudo apt-get update 
+       sudo apt-get install -y python3.8 
+       sudo apt-get install -y python3-venv 
+
+       apt-get install git wget curl python3 python3-pip locales ffmpeg p7zip-full
+ 
+        
 
  - Clone repo:
 
         git clone https://github.com/Sam-Max/Rclone-Tg-Bot rclonetgbot/ && cd rclonetgbot
+ 
+        pip install -r requirements.txt 
 
 2. **Set up config file**
 
