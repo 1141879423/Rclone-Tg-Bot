@@ -25,20 +25,20 @@ restart - restart bot
 ```
 
 ## Deploying on Heroku
-<p><a href="https://github.com/Sam-Max/Rclone-Tg-Bot/tree/heroku"> <img src="https://img.shields.io/badge/Deploy%20Guide-blueviolet?style=for-the-badge&logo=heroku" width="170""/></a></p>
+<p><a href="https://github.com/1141879423/Rclone-Tg-Bot/tree/heroku"> <img src="https://img.shields.io/badge/Deploy%20Guide-blueviolet?style=for-the-badge&logo=heroku" width="170""/></a></p>
 
 
 ## Deploy on VPS: 
 
 1. **Installing requirements**
  
- - Update & Installing requirements:
+ - Update & Install requirements:
  
        sudo apt-get update 
        sudo apt-get upgrade
        apt-get install git wget curl python3 python3-pip python3-venv locales ffmpeg p7zip-full 
  
- - Installing rclone:
+ - Install rclone:
  
        curl https://rclone.org/install.sh | bash
 
@@ -73,7 +73,6 @@ restart - restart bot
 
 3. **Deploying on VPS**
 
-       curl https://rclone.org/install.sh | bash
        chmod 777 start.sh 
        ./start.sh
 
